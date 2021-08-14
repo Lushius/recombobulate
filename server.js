@@ -13,6 +13,9 @@ app.use((req, res, next) => {
 app.set('view engine', 'ejs');
 app.use(express.static(`${__dirname}/public`));
 
+// Controllers
+app.use('/auth', require('./controllers/authCtrl'));
+
 
 app.get('/', (req, res) => {
     res.render('home')
