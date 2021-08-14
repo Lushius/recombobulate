@@ -1,7 +1,24 @@
 <%- include('../partials/head') %> 
 <body>
     <%- include('../partials/nav') %>
-    <h1>Register</h1> 
+    <h1>Register</h1>
+    <br><br>
+    <form action="/auth/register" method="POST">
+    
+        <label for="fName">First Name:</label>
+        <input type="text" name="fName" placeholder="First Name"><br>
+        <label for="lName">Last Name:</label>
+        <input type="text" name="lName" placeholder="Last Name"><br>
+        <label for="uName"> Username:</label>
+        <input type="text" name="uName" placeholder="Username" required><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="john.d@snailmail.gg" required><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+
+        <button type="submit">Register</button>
+    
+    </form>
     
 </body>
 </html>

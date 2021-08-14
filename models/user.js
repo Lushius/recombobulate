@@ -12,6 +12,11 @@ const userSchema = new mongoose.Schema({
         type: mongoose.SchemaTypes.Email,
         required: true,
     },
+    password: {
+        type: String,
+        required: true,
+        minLength: 4,
+    }
 });
 
 module.exports = mongoose.model('User', userSchema);

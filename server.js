@@ -12,6 +12,7 @@ app.use((req, res, next) => {
 
 app.set('view engine', 'ejs');
 app.use(express.static(`${__dirname}/public`));
+app.use(express.urlencoded({extended: false}))
 
 // Controllers
 app.use('/auth', require('./controllers/authCtrl'));
