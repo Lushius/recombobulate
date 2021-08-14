@@ -9,4 +9,6 @@ mongoose.connect(process.env.MONGODB_URI, {
     .then(() => console.log(`MongoDB connected to ${process.env.DB}`))
     .catch((err) => console.log(err));
 
-module.exports = {}
+module.exports = {
+    user: require('./user'),
+}

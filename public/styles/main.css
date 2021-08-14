@@ -22,20 +22,12 @@ body {
     color: cornsilk;
     font-size: 3vh;
 }
-.authBar {
-
-}
-
-
-nav ul li {
-    text-decoration: none;
+.navContainer ul li{
     display: inline;
 }
-/* nav a {
-    text-decoration: none;
+/* .navBar {
 
-    font-size: 3vh;
-} */
-h1 {
-    align-content: center;
 }
+.authBar {
+
+} */
