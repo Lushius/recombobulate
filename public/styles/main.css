@@ -1,3 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
 body {
-    background-color: aqua;
+    background-color:coral;
+}
+
+/* Nav Bar */
+.navContainer {
+    display: flex;
+    background-color: crimson;
+    height: 7vh;
+    align-items: center;
+    padding: 0 1vw 0 1vw;
+    justify-content: space-between;
+    color: cornsilk;
+    font-size: 3vh;
+}
+.authBar {
+
+}
+
+
+nav ul li {
+    text-decoration: none;
+    display: inline;
+}
+/* nav a {
+    text-decoration: none;
+
+    font-size: 3vh;
+} */
+h1 {
+    align-content: center;
 }

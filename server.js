@@ -4,10 +4,10 @@ const app = express();
 const db = require('./models')
 
 app.use((req, res, next) => {
-    if (req.url != '/favicon.ico') {
+    if (req.url != '/favicon.ico' && req.url != '/styles/main.css') {
         console.log(`${req.method} - ${req.url} @ ${new Date().toLocaleTimeString()}`);
-        next();
     }
+    next();
 });
 
 app.set('view engine', 'ejs');
