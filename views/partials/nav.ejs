@@ -3,8 +3,13 @@
         <a href="/"><li class="navLink">Home</li></a>
     </ul>
     <h1>recombobulate.me</h1>
-    <ul class="authBar">
-        <a href="/auth/login"><li class="authLink">Log In</li></a>
-        <a href="/auth/register"><li class="authLink">Register</li></a>
-    </ul>
+    
+    <% if (!accessToken) { %> 
+        <ul class="authBar">
+            <a href="/auth/login"><li class="authLink">Log In</li></a>
+            <a href="/auth/register"><li class="authLink">Register</li></a>
+        </ul>
+    <% } else { %>
+        <div class="authBar"><p>Welcome back,</p></div>
+    <% } %> 
 </nav>
