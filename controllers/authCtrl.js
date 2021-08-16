@@ -5,10 +5,10 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
 router.get('/login', (req, res) => {
-    res.render('auth/login', {accessToken: req.accessToken});
+    res.render('auth/login', {user: req.uName});
 })
 router.get('/register', (req, res) => {
-    res.render('auth/register', {accessToken: req.accessToken})
+    res.render('auth/register', {user: req.uName})
 })
 
 router.post('/login', (req, res) => {
@@ -22,7 +22,7 @@ router.post('/login', (req, res) => {
                 uName: foundUser.uName,
             }
             const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET,{expiresIn: 20});
-            res.cookie('authorization', accessToken)
+            res.cookie('auth', accessToken);
             res.redirect('/');
         })
     })

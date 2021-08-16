@@ -4,12 +4,12 @@
     </ul>
     <h1>recombobulate.me</h1>
     
-    <% if (!accessToken) { %> 
+    <% if (!user) { %> 
         <ul class="authBar">
             <a href="/auth/login"><li class="authLink">Log In</li></a>
             <a href="/auth/register"><li class="authLink">Register</li></a>
         </ul>
     <% } else { %>
-        <div class="authBar"><p>Welcome back,</p></div>
+        <div class="authBar"><p>Welcome back, <%= user %></p></div>
     <% } %> 
 </nav>
